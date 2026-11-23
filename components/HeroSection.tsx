@@ -14,31 +14,31 @@ export default function HeroSection() {
 
   return (
     <section id="top" className="pt-8 pb-12 sm:pt-12 sm:pb-16">
-      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10">
-        {/* Ultra-Clean 2-Column Hero Split */}
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-10">
+        {/* Balanced Neutral 2-Column Hero */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-6 flex flex-col justify-center py-1"
+            className="lg:col-span-6 flex flex-col justify-center py-2"
           >
-            <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs sm:text-[13px] font-medium text-[#525860] mb-4">
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs sm:text-[13px] font-medium text-[#52525B] mb-4">
               <span>{CONTACT.locationShort}</span>
               <span aria-hidden="true">·</span>
               <span>RERA Approved</span>
             </div>
 
             <h1
-              className="font-serif font-semibold text-[#14171A] tracking-[-0.02em] leading-[1.1] text-balance"
-              style={{ fontSize: 'clamp(2.25rem, 3.8vw, 3.5rem)' }}
+              className="font-serif font-semibold text-[#18181B] tracking-[-0.02em] leading-[1.1] text-balance"
+              style={{ fontSize: 'clamp(2.25rem, 3.8vw, 3.45rem)' }}
             >
-              3 &amp; 4 BHK Sky Residences on Golf Course Ext. Road.
+              3 &amp; 4 BHK Sky Residences Built for Quiet Living.
             </h1>
 
-            <p className="mt-4 text-[15px] sm:text-base text-[#454A50] leading-[1.6] max-w-[52ch]">
-              Direct builder pricing from ₹3.45 Cr with 0% brokerage. No forms — tap WhatsApp or
-              Call for instant floor plans, live inventory, and site visits.
+            <p className="mt-4 text-[15px] sm:text-base text-[#52525B] leading-[1.65] max-w-[50ch]">
+              Direct builder pricing from ₹3.45 Cr with zero brokerage. No forms — connect straight
+              on WhatsApp or Call for floor plans, live inventory, and site visits.
             </p>
 
             {/* Primary WhatsApp & Call CTAs */}
@@ -47,7 +47,7 @@ export default function HeroSection() {
                 href={heroWhatsAppUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 min-h-[50px] px-6 py-3 rounded-lg bg-[#0E6F4E] text-white text-[15px] font-semibold hover:bg-[#0A593E] active:scale-[0.98] transition-all duration-150 whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0E6F4E] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F7F6F2]"
+                className="inline-flex items-center justify-center gap-2 min-h-[50px] px-6 py-3 rounded-lg bg-[#0E6F4E] text-white text-[15px] font-semibold hover:bg-[#0A593E] active:scale-[0.98] transition-all duration-150 whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0E6F4E] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F8F8F6]"
               >
                 <MessageCircle className="w-5 h-5 shrink-0" aria-hidden="true" />
                 <span>WhatsApp for Brochure</span>
@@ -56,20 +56,20 @@ export default function HeroSection() {
 
               <a
                 href={`tel:${CONTACT.phoneRaw}`}
-                className="inline-flex items-center justify-center gap-2 min-h-[50px] px-5 py-3 rounded-lg bg-[#FFFFFF] text-[#14171A] border border-[#D4D1C8] text-[15px] font-semibold hover:bg-[#EFECE5] active:scale-[0.98] transition-all duration-150 whitespace-nowrap shrink-0 tabular-nums focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#14171A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F7F6F2]"
+                className="inline-flex items-center justify-center gap-2 min-h-[50px] px-5 py-3 rounded-lg bg-[#FFFFFF] text-[#18181B] border border-[#DAD9D2] text-[15px] font-semibold hover:bg-[#F1F0EC] active:scale-[0.98] transition-all duration-150 whitespace-nowrap shrink-0 tabular-nums focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#18181B] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F8F8F6]"
               >
                 <Phone className="w-4 h-4 shrink-0" aria-hidden="true" />
                 <span>Call {CONTACT.phoneDisplay}</span>
               </a>
             </div>
 
-            <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs sm:text-[13px] text-[#5B6168]">
+            <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs sm:text-[13px] text-[#71717A]">
               <span>0% Brokerage · Instant PDF</span>
               <Link
                 href="/available-properties"
-                className="inline-flex items-center gap-1 font-semibold text-[#14171A] hover:text-[#0E6F4E] underline underline-offset-4 transition-colors whitespace-nowrap"
+                className="inline-flex items-center gap-1 font-semibold text-[#18181B] hover:text-[#0E6F4E] underline underline-offset-4 transition-colors whitespace-nowrap"
               >
-                <span>View Available Properties</span>
+                <span>Explore Available Properties</span>
                 <ArrowRight className="w-3.5 h-3.5 shrink-0" aria-hidden="true" />
               </Link>
             </div>
@@ -80,7 +80,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, scale: 0.99 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-6 relative min-h-[260px] sm:min-h-[360px] lg:min-h-[430px] lg:h-full rounded-2xl overflow-hidden bg-[#E6E3DA] border border-[#DFDDD5]"
+            className="lg:col-span-6 relative min-h-[260px] sm:min-h-[360px] lg:min-h-[430px] lg:h-full rounded-2xl overflow-hidden bg-[#ECEBE6] border border-[#E5E4DF]"
           >
             <ArchitecturalImage
               src={heroResidenceImg}
@@ -93,19 +93,19 @@ export default function HeroSection() {
           </motion.div>
         </div>
 
-        {/* Clean 4-Column Key Facts Strip */}
-        <div className="mt-8 grid grid-cols-2 lg:grid-cols-4 border border-[#E4E2DC] rounded-xl bg-[#FFFFFF] divide-y lg:divide-y-0 divide-x-0 sm:divide-x divide-[#E4E2DC]">
+        {/* Clean Neutral 4-Column Key Facts Strip */}
+        <div className="mt-8 grid grid-cols-2 lg:grid-cols-4 border border-[#E5E4DF] rounded-xl bg-[#FFFFFF] divide-y lg:divide-y-0 divide-x-0 sm:divide-x divide-[#E5E4DF]">
           {HERO_METRICS.map((metric, index) => (
             <div
               key={metric.label}
               className={`px-4 py-4 sm:px-6 sm:py-5 ${
-                index % 2 === 1 ? 'border-l border-[#E4E2DC] sm:border-l-0' : ''
+                index % 2 === 1 ? 'border-l border-[#E5E4DF] sm:border-l-0' : ''
               }`}
             >
-              <p className="font-serif text-xl sm:text-2xl font-semibold text-[#14171A] tracking-tight tabular-nums leading-tight">
+              <p className="font-serif text-xl sm:text-2xl font-semibold text-[#18181B] tracking-tight tabular-nums leading-tight">
                 {metric.value}
               </p>
-              <p className="mt-1 text-xs text-[#525860] leading-snug">{metric.label}</p>
+              <p className="mt-1 text-xs text-[#52525B] leading-snug">{metric.label}</p>
             </div>
           ))}
         </div>

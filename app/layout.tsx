@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#F7F6F2',
+  themeColor: '#F8F8F6',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -48,7 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     >
       <body
         suppressHydrationWarning
-        className="bg-[#F7F6F2] text-[#14171A] font-sans antialiased selection:bg-[#0E6F4E]/15 selection:text-[#0E6F4E] overflow-x-hidden"
+        className="bg-[#F8F8F6] text-[#18181B] font-sans antialiased selection:bg-[#0E6F4E]/15 selection:text-[#0E6F4E] overflow-x-hidden"
       >
         {children}
       </body>

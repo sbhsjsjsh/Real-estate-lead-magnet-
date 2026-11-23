@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function AvailablePropertiesPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#F7F6F2] text-[#14171A]">
+    <div className="min-h-screen flex flex-col bg-[#F8F8F6] text-[#18181B]">
       <TopBar />
       <main className="flex-1">
         <AvailablePropertiesCatalog />

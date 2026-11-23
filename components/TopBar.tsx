@@ -22,13 +22,13 @@ export default function TopBar() {
   );
 
   return (
-    <header className="relative md:sticky md:top-0 z-40 bg-[#F7F6F2]/95 md:backdrop-blur-md border-b border-[#E4E2DC]">
-      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10 h-16 flex items-center justify-between gap-8">
+    <header className="relative md:sticky md:top-0 z-40 bg-[#F8F8F6]/95 md:backdrop-blur-md border-b border-[#E5E4DF]">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-10 h-16 flex items-center justify-between gap-8">
         {/* Zone 1: Single-element brand wordmark */}
         <Link
           href="/"
           onClick={() => setMenuOpen(false)}
-          className="font-serif text-xl sm:text-2xl font-semibold tracking-tight text-[#14171A] whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0E6F4E] rounded-sm"
+          className="font-serif text-xl sm:text-2xl font-semibold tracking-tight text-[#18181B] whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0E6F4E] rounded-sm"
         >
           {CONTACT.brandName}
         </Link>
@@ -36,7 +36,7 @@ export default function TopBar() {
         {/* Zone 2: Desktop single-line navigation links */}
         <nav
           aria-label="Primary"
-          className="hidden md:flex items-center gap-7 text-sm font-medium text-[#4A5056]"
+          className="hidden md:flex items-center gap-7 text-sm font-medium text-[#52525B]"
         >
           {NAV_LINKS.map((item) => {
             const isActive =
@@ -49,8 +49,8 @@ export default function TopBar() {
                 href={item.href}
                 className={`transition-colors duration-150 underline-offset-4 whitespace-nowrap shrink-0 ${
                   isActive
-                    ? 'text-[#14171A] font-semibold underline'
-                    : 'hover:text-[#14171A] hover:underline'
+                    ? 'text-[#18181B] font-semibold underline'
+                    : 'hover:text-[#18181B] hover:underline'
                 }`}
               >
                 {item.label}
@@ -65,7 +65,7 @@ export default function TopBar() {
             href={headerWhatsAppHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:inline-flex items-center justify-center gap-2 min-h-[40px] px-4 py-2 rounded-lg bg-[#0E6F4E] text-white text-sm font-semibold hover:bg-[#0A593E] active:scale-[0.98] transition-all duration-150 whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0E6F4E] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F7F6F2]"
+            className="hidden md:inline-flex items-center justify-center gap-2 min-h-[40px] px-4 py-2 rounded-lg bg-[#0E6F4E] text-white text-sm font-semibold hover:bg-[#0A593E] active:scale-[0.98] transition-all duration-150 whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0E6F4E] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F8F8F6]"
           >
             <MessageCircle className="w-4 h-4 shrink-0" aria-hidden="true" />
             <span>WhatsApp</span>
@@ -77,7 +77,7 @@ export default function TopBar() {
             aria-controls="mobile-menu-panel"
             aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
             onClick={() => setMenuOpen((prev) => !prev)}
-            className="md:hidden inline-flex items-center justify-center gap-1.5 min-h-[42px] px-3 py-2 rounded-lg border border-[#D4D1C8] bg-white text-sm font-semibold text-[#14171A] hover:bg-[#EFECE5] transition-colors whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0E6F4E]"
+            className="md:hidden inline-flex items-center justify-center gap-1.5 min-h-[42px] px-3.5 py-2 rounded-lg border border-[#DAD9D2] bg-white text-sm font-semibold text-[#18181B] hover:bg-[#F1F0EC] transition-colors whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0E6F4E]"
           >
             {menuOpen ? (
               <>
@@ -98,9 +98,9 @@ export default function TopBar() {
       {menuOpen && (
         <div
           id="mobile-menu-panel"
-          className="md:hidden border-t border-[#E4E2DC] bg-[#FFFFFF] px-4 py-4"
+          className="md:hidden border-t border-[#E5E4DF] bg-[#FFFFFF] px-4 py-4"
         >
-          <nav aria-label="Mobile menu" className="flex flex-col divide-y divide-[#ECEAE4]">
+          <nav aria-label="Mobile menu" className="flex flex-col divide-y divide-[#EFEFE9]">
             {NAV_LINKS.map((item) => {
               const isActive =
                 item.href === '/'
@@ -112,19 +112,19 @@ export default function TopBar() {
                   href={item.href}
                   onClick={() => setMenuOpen(false)}
                   className={`py-3.5 text-[15px] flex items-center justify-between ${
-                    isActive ? 'font-semibold text-[#0E6F4E]' : 'font-medium text-[#14171A]'
+                    isActive ? 'font-semibold text-[#0E6F4E]' : 'font-medium text-[#18181B]'
                   }`}
                 >
                   <span>{item.label}</span>
                   {item.href === '/available-properties' && (
-                    <span className="text-xs font-medium text-[#525860] tabular-nums">5 Options</span>
+                    <span className="text-xs font-medium text-[#71717A] tabular-nums">5 Options</span>
                   )}
                 </Link>
               );
             })}
           </nav>
 
-          <div className="mt-4 pt-4 border-t border-[#E4E2DC] grid grid-cols-2 gap-2.5">
+          <div className="mt-4 pt-4 border-t border-[#E5E4DF] grid grid-cols-2 gap-2.5">
             <a
               href={headerWhatsAppHref}
               target="_blank"
@@ -138,7 +138,7 @@ export default function TopBar() {
             <a
               href={`tel:${CONTACT.phoneRaw}`}
               onClick={() => setMenuOpen(false)}
-              className="inline-flex items-center justify-center gap-2 min-h-[44px] px-3 py-2 rounded-lg border border-[#D4D1C8] bg-[#F7F6F2] text-[#14171A] text-sm font-semibold whitespace-nowrap"
+              className="inline-flex items-center justify-center gap-2 min-h-[44px] px-3 py-2 rounded-lg border border-[#DAD9D2] bg-[#F8F8F6] text-[#18181B] text-sm font-semibold whitespace-nowrap"
             >
               <Phone className="w-4 h-4 shrink-0" aria-hidden="true" />
               <span>Call Desk</span>
